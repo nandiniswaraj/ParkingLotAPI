@@ -2,31 +2,25 @@ package com.bridgelabz.parkinglot.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.bridgelabz.parkinglot.exception.UserException.exceptionType;
+
 @ResponseStatus
 public class ParkingLotException  extends Exception  {
 
 	
-		private static final long serialVersionUID = 1L;
-		int code;
-		String msg;
+	  private static final long serialVersionUID = 1L;
+	    public exceptionType type;
 
-		public ParkingLotException() {
-		}
+	    public ParkingLotException(exceptionType type) {
+	        this.type = type;
+	    }
 
-		public ParkingLotException(int code, String msg) {
-			super(msg);
-			this.code = code;
-
-		}
-
-		public ParkingLotException(String msg) {
-			super(msg); 
-		}
-
-		@Override
-		public String toString() {
-			return "UserException [code=" + code + ", msg=" + msg + "]";
-		}
-
+	    public enum exceptionType {
+	        USER_NOT_FOUND,
+	        VEHICLE_NOT_EXIST,
+	        PARKINGLOT_FULL,
+	        DRIVER_NOT_FOUND;
+	        
+	    }
 	}
 

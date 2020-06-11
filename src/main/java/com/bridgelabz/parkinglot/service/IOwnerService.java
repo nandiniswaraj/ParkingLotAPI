@@ -1,15 +1,17 @@
 package com.bridgelabz.parkinglot.service;
 
-import org.springframework.http.ResponseEntity;
-
-import com.bridgelabz.parkinglot.configuration.Response;
-import com.bridgelabz.parkinglot.exception.ParkingLotException;
+import com.bridgelabz.parkinglot.dto.CreateParkingLotDTO;
+import com.bridgelabz.parkinglot.dto.LoginDTO;
+import com.bridgelabz.parkinglot.dto.RegistrationDTO;
+import com.bridgelabz.parkinglot.response.Response;
 
 public interface IOwnerService {
-	
-	
-	Response isParkingLotCreate(Integer parkingLotCapacity);
 
+    Response registration(RegistrationDTO user);
 
+    Response verifyAccount(String token);
 
+    Response login(LoginDTO loginDTO);
+
+    Response createParkingLotSystem(CreateParkingLotDTO createParkingLotDTO);
 }

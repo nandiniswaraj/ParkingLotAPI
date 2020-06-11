@@ -1,6 +1,7 @@
-package com.bridgelabz.parkinglot.exception;
+/*package com.bridgelabz.parkinglot.exception;
 
 import org.springframework.stereotype.Component;
+
 
 import com.bridgelabz.parkinglot.configuration.Response;
 @Component
@@ -12,4 +13,4 @@ public class ResponseHelper {
 		statusResponse.setResult(result);
 		return statusResponse;
 	}
-}
+}*/
